@@ -7,186 +7,173 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0d0d0d; color: #d1d5db; }
-        .gradient-text { background: linear-gradient(45deg, #215350, #FFD700); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .bg-card { background-color: #1a1a1a; border: 1px solid #2d2d2d; transition: all 0.3s ease; }
-        .bg-card:hover { transform: translateY(-3px); border-color: #215350; }
-        .text-gold-accent { color: #FFD700; }
-        .btn-primary { background-color: #215350; transition: all 0.3s ease; }
-        .btn-primary:hover { background-color: #1a403d; transform: scale(1.02); }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            color: #d1d5db;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #215350, #FFD700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-card {
+            background-color: #1a1a1a;
+            border: 1px solid #2d2d2d;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        .text-gold-accent {
+            color: #FFD700;
+        }
+        .btn-primary {
+            background-color: #215350;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #1a403d;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-300">
 
-    <header class="sticky top-0 z-50 bg-[#0d0d0d]/90 backdrop-blur-sm border-b border-gray-800">
+    <header class="sticky top-0 z-50 bg-[#0d0d0d]/80 backdrop-blur-sm shadow-lg">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold tracking-tight">ENEMARY AGBO</a>
-            <div class="space-x-6 hidden md:block text-sm font-medium">
-                <a href="#about" class="hover:text-white transition">About</a>
-                <a href="#projects" class="hover:text-white transition">Core Projects</a>
-                <a href="#solo-projects" class="hover:text-white transition">Technical Demos</a>
-                <a href="#testimonials" class="hover:text-white transition">Reviews</a>
-                <a href="#contact" class="hover:text-white transition">Contact</a>
+            <a href="#" class="text-2xl font-bold gradient-text">Enemary Agbo</a>
+            <div class="space-x-4 hidden md:block">
+                <a href="#about" class="text-gray-400 hover:text-white transition">About</a>
+                <a href="#projects" class="text-gray-400 hover:text-white transition">Projects</a>
+                <a href="#solo-projects" class="text-gray-400 hover:text-white transition">Technical Demos</a>
+                <a href="#skills" class="text-gray-400 hover:text-white transition">Skills</a>
+                <a href="#testimonials" class="text-gray-400 hover:text-white transition">Reviews</a>
+                <a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a>
             </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-400 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
         </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0d0d0d] px-6 py-4 space-y-2 text-center">
+            <a href="#about" class="block text-gray-400">About</a>
+            <a href="#projects" class="block text-gray-400">Projects</a>
+            <a href="#testimonials" class="block text-gray-400">Reviews</a>
+            <a href="#contact" class="block text-gray-400">Contact</a>
+        </div>
     </header>
 
     <main class="container mx-auto px-6 py-12">
 
-        <section id="hero" class="py-16 md:py-24 border-b border-gray-800">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="flex-shrink-0">
-                    <img src="https://i.imgur.com/jO0tSen.jpeg" alt="Enemary AGBO" class="w-48 h-48 rounded-full object-cover border-4 border-[#215350] shadow-2xl">
+        <section id="hero" class="w-full h-auto py-20 bg-gray-900 text-white">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 px-4">
+                <div class="flex-shrink-0 flex flex-col items-center">
+                    <img src="https://i.imgur.com/jO0tSen.jpeg" alt="Enemary AGBO" class="w-48 h-48 rounded-full object-cover border-4 border-white shadow-lg">
+                    <div class="flex space-x-4 mt-4 text-gray-300">
+                        <a href="https://www.linkedin.com/in/enemaryagbo" class="hover:text-cyan-400 transition" target="_blank">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.766s.784-1.764 1.75-1.764c.967 0 1.75.789 1.75 1.764s-.783 1.766-1.75 1.766zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
+                        </a>
+                        <a href="mailto:enegoloyinumary@gmail.com" class="hover:text-cyan-400 transition" target="_blank">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.756-8.981c.321-.219.673-.418 1.05-.595l10.706 8.216 10.706-8.216c.377.177.729.376 1.05.595l-11.756 8.981zM12 15.656l-12-9.156v13.5h24v-13.5l-12 9.156z" /></svg>
+                        </a>
+                    </div>
                 </div>
                 <div class="max-w-3xl text-center md:text-left">
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-                        I'm Enemary Agbo, an <span class="gradient-text">AI Technical PM.</span>
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+                        AI Product Manager | <span class="gradient-text">Driving Growth through Data-Driven Solutions</span>
                     </h1>
-                    <p class="mt-6 text-2xl text-white font-medium leading-relaxed">
-                        I help AI-driven organizations build 100% accurate, hallucination-free products that users actually trust.
+                    <p class="mt-4 text-lg text-gray-400 leading-relaxed">I build ethical, human-centered AI products that solve real-world problems.</p>
+                    <div class="mt-8">
+                        <a href="#projects" class="inline-block bg-white text-gray-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition">
+                            View My Solutions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="w-full h-auto py-20 bg-gray-950 text-white border-b border-gray-800">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-cyan-400 mb-12">Professional Capability</h2>
+                <div class="max-w-4xl mx-auto space-y-8 text-lg text-gray-400 leading-relaxed">
+                    <p>
+                        I am an AI Product Manager and Business Analyst focused on the transition of artificial intelligence from experimental prototypes to stable, production-ready solutions. My work centers on solving the core challenges of modern AI deployment: system accuracy, cultural alignment, and user retention.
                     </p>
-                    <p class="mt-4 text-gray-400">
-                        I bridge the gap between technical LLM architecture and human-centered design, ensuring technology solves real business problems without the errors.
+                    <p>
+                        My approach is grounded in the belief that AI utility is defined by reliability. I have a documented history of improving system performance by over 50% through rigorous data annotation, LLM evaluation, and the implementation of ethical safeguards. By identifying and resolving friction points in the user journey, I have helped organizations achieve engagement growth of up to 75%.
                     </p>
-                    <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
-                        <a href="#contact" class="btn-primary text-white font-bold py-4 px-10 rounded-lg shadow-lg">Work With Me</a>
-                        <a href="#projects" class="border border-gray-700 py-4 px-10 rounded-lg hover:bg-gray-800 transition">View My Solutions</a>
-                    </div>
+                    <p>
+                        I offer a multidisciplinary perspective that combines technical project management with an academic background in Neuroscience. This allows me to align technical roadmaps with human behavioral patterns, ensuring that products are not only functional but intuitive. As a Certified Scrum Master, I provide the structure necessary to lead cross-functional teams through complex development cycles with clarity and precision.
+                    </p>
+                    <p>
+                        I am available to help teams build AI products that are technically sound, ethically responsible, and designed for long-term user trust.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-16">
-            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-8">What I Do</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-gray-400 leading-relaxed">
-                <div class="bg-card p-6 rounded-xl">
-                    <h3 class="text-white font-bold mb-2">Technical PM</h3>
-                    <p class="text-sm">I manage end-to-end AI product development, ensuring timely delivery using Agile and Scrum frameworks.</p>
+        <section id="projects" class="py-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Featured Projects</h2>
+            <div class="space-y-12 max-w-5xl mx-auto">
+                <div class="bg-card rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-gold-accent mb-2">EdTech AI Integration</h3>
+                    <p class="text-gray-400">Led a cross-functional team integrating an AI-powered assessment dashboard. Reduced teacher marking time by 40% and increased student submission turnover.</p>
+                    <a href="https://docs.google.com/document/d/1A3pynGvemVyEmgwkW0okohBLOLUhziuXOyIlOM4aDOQ/edit?usp=sharing" class="inline-block mt-4 text-white btn-primary font-bold py-2 px-6 rounded-full" target="_blank">View Project Doc</a>
                 </div>
-                <div class="bg-card p-6 rounded-xl">
-                    <h3 class="text-white font-bold mb-2">Accuracy Specialist</h3>
-                    <p class="text-sm">I eliminate AI "hallucinations" by implementing RAG systems and rigorous data evaluation protocols.</p>
-                </div>
-                <div class="bg-card p-6 rounded-xl">
-                    <h3 class="text-white font-bold mb-2">Business Analyst</h3>
-                    <p class="text-sm">I translate user needs into technical roadmaps that improve engagement and system reliability.</p>
+                <div class="bg-card rounded-xl p-8">
+                    <h3 class="text-xl font-bold text-gold-accent mb-2">AI Behavioral Gaming Platform</h3>
+                    <p class="text-gray-400">Managed quality assurance for LLM prototypes and model fine-tuning. Achieved a 15% improvement in accuracy and 28% reduction in latency.</p>
+                    <a href="https://docs.google.com/document/d/1nR9ixWJzG6iRIZH_1cWLEWBxGGNy-KWQp4LRPbwGzm0/edit?usp=sharing" class="inline-block mt-4 text-white btn-primary font-bold py-2 px-6 rounded-full" target="_blank">View Project Doc</a>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-20 border-t border-gray-800">
-            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12">Core Professional Projects</h2>
-            
-            <div class="space-y-16">
-                <div class="grid lg:grid-cols-2 gap-12 items-start bg-card p-8 rounded-3xl">
-                    <div>
-                        <span class="text-xs font-bold text-[#215350] uppercase">Latest Implementation</span>
-                        <h3 class="text-3xl font-bold text-white mt-2 mb-4">Ensuring AI Accuracy (RAG)</h3>
-                        <p class="text-gray-400 mb-6">
-                            I built this demo to show how we can force an AI model to only use specific, verified research papers to answer questions. This eliminates "hallucinations" and makes the AI a reliable assistant for professionals.
-                        </p>
-                        <a href="https://www.loom.com/share/32bed89779e1465e9d3299006dcb4f12" target="_blank" class="inline-block bg-[#215350] text-white py-2 px-6 rounded-full font-bold">Watch My 2-Min Demo</a>
-                    </div>
-                    <div class="rounded-xl overflow-hidden border border-gray-700 shadow-2xl">
-                        <iframe src="https://www.loom.com/embed/32bed89779e1465e9d3299006dcb4f12" class="w-full aspect-video" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900 p-8 rounded-2xl border-l-4 border-cyan-500">
-                    <h3 class="text-2xl font-bold text-white mb-2">Published Research: Mental Health Tech</h3>
-                    <p class="text-gray-400 mb-4 italic text-sm">International Journal of Research and Innovation in Social Science (IJRISS).</p>
-                    <p class="text-gray-400 mb-4">I co-authored a peer-reviewed study on how digital platforms can close the mental health care gap in Africa. This research informs how I build AI tools for diverse populations.</p>
-                    <a href="https://lnkd.in/e4BDRWXk" target="_blank" class="text-gold-accent font-bold hover:underline">Read the Paper →</a>
-                </div>
-
-                <div class="bg-card p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-white mb-2">FriendnPal: AI Therapy Platform</h3>
-                    <p class="text-gray-400 mb-4">I led the research to make an AI therapist more culturally aware and emotionally accurate. My work directly helped increase the system’s engagement by 75% and improved accuracy by over 50%.</p>
-                    <div class="flex gap-6">
-                        <a href="https://friendnpal.com/" class="text-cyan-400 text-sm font-bold hover:underline" target="_blank">View Live Site</a>
-                        <a href="https://docs.google.com/document/d/1W_MKo1K1PpNWnAiGWx7tXjZG8sI7Vez2ZJnxPngjBvU/edit?usp=sharing" class="text-cyan-400 text-sm font-bold hover:underline" target="_blank">Read Case Study</a>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-card p-6 rounded-xl border-t-2 border-gray-700">
-                        <h4 class="font-bold text-white">EdTech AI Dashboard</h4>
-                        <p class="text-sm text-gray-400 mt-2">I managed the launch of an AI tool for schools that cut grading time by 40%, leading to record assignment turnover.</p>
-                        <a href="https://docs.google.com/document/d/1A3pynGvemVyEmgwkW0okohBLOLUhziuXOyIlOM4aDOQ/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-4 block" target="_blank">Project Details</a>
-                    </div>
-                    <div class="bg-card p-6 rounded-xl border-t-2 border-gray-700">
-                        <h4 class="font-bold text-white">AI Behavioral Gaming</h4>
-                        <p class="text-sm text-gray-400 mt-2">I led quality assurance for an AI gaming platform, making the system 28% faster and more reliable.</p>
-                        <a href="https://docs.google.com/document/d/1nR9ixWJzG6iRIZH_1cWLEWBxGGNy-KWQp4LRPbwGzm0/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-4 block" target="_blank">Project Details</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="solo-projects" class="py-20 bg-[#0a0a0a] rounded-3xl px-8 border border-gray-800">
-            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12 text-center">Technical Demos</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-white">AI Sales Automation</h3>
-                    <p class="text-gray-400 text-sm">Automated system that qualifies leads and sends personalized outreach, saving hours of manual labor.</p>
-                    <a href="https://www.loom.com/share/1658a2d7d4dc4432aa735ea254bb5dab" class="text-cyan-400 text-xs font-bold block" target="_blank">Watch Video →</a>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-white">Energy Prediction Model</h3>
-                    <p class="text-gray-400 text-sm">ML model predicting energy output for power plants with 93% accuracy using Linear Regression.</p>
-                    <a href="https://www.loom.com/share/070982c7282c46ac8fbbb7a0522fb9f3" class="text-cyan-400 text-xs font-bold block" target="_blank">Watch Video →</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="py-24">
-            <h2 class="text-3xl font-bold text-white mb-12 text-center">What People Say</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+        <section id="testimonials" class="py-16 bg-gray-950 rounded-3xl">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Client Review</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+                <div class="bg-card rounded-xl p-8 italic text-sm text-gray-400">
                     "Enemary's skills in AI and UX research is truly exceptional... she brings a balanced approach."
-                    <span class="block mt-4 not-italic font-bold text-white">- Femi Banjo</span>
+                    <p class="mt-4 not-italic font-bold text-gray-200">- Femi Banjo</p>
                 </div>
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                <div class="bg-card rounded-xl p-8 italic text-sm text-gray-400">
                     "Her perspective from testing LLM models helped us see things we hadn't considered."
-                    <span class="block mt-4 not-italic font-bold text-white">- Vidusha Edirisinghe</span>
+                    <p class="mt-4 not-italic font-bold text-gray-200">- Vidusha Edirisinghe</p>
                 </div>
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                <div class="bg-card rounded-xl p-8 italic text-sm text-gray-400">
                     "Your dedication, professionalism, and compassion truly made a difference."
-                    <span class="block mt-4 not-italic font-bold text-white">- Adanna, FriendnPal</span>
+                    <p class="mt-4 not-italic font-bold text-gray-200">- Adanna, HR Manager</p>
                 </div>
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
-                    "Impressive work ethic! She is attentive to detail and proactive."
-                    <span class="block mt-4 not-italic font-bold text-white">- Yusuf Hamza</span>
-                </div>
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
-                    "Invaluable insights into UI and pinpointing friction points in our model."
-                    <span class="block mt-4 not-italic font-bold text-white">- My Luu</span>
-                </div>
-                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
-                    "Great feedback in usability testing and strategy to optimize experience."
-                    <span class="block mt-4 not-italic font-bold text-white">- Amber Trivedi</span>
-                </div>
+            </div>
+            <div class="flex justify-center mt-12">
+                <a href="https://docs.google.com/document/d/1O9rEaCArhNqRcl5_D3I19oDax09M4uYtC1vE8KscN2s/edit?usp=sharing" class="btn-primary text-white font-bold py-3 px-8 rounded-full shadow-lg transition" target="_blank">
+                    View Full Review Document
+                </a>
             </div>
         </section>
 
-        <section id="contact" class="py-20 text-center border-t border-gray-800">
-            <h2 class="text-3xl font-bold text-white mb-4">Let's solve your product challenges.</h2>
-            <p class="text-gray-400 mb-10 max-w-xl mx-auto">I'm currently open to Technical PM and Business Analyst roles where I can help teams deliver accurate AI products.</p>
-            <a href="mailto:enegoloyinumary@gmail.com" class="btn-primary text-white font-bold py-4 px-12 rounded-full shadow-xl inline-block">Email Enemary Agbo</a>
+        <section id="contact" class="py-16">
+            <h2 class="text-3xl font-bold text-white text-center mb-8">Get In Touch</h2>
+            <div class="max-w-2xl mx-auto bg-card p-8 rounded-xl text-center">
+                <p class="mb-8 text-gray-400">I am open to discussing how my background in AI product management and behavioral science can support your team's objectives.</p>
+                <a href="mailto:enegoloyinumary@gmail.com" class="btn-primary text-white font-bold py-4 px-12 rounded-full shadow-lg inline-block">Email Enemary Agbo</a>
+            </div>
         </section>
 
     </main>
 
-    <footer class="py-10 text-center border-t border-gray-800 text-xs text-gray-500">
-        &copy; <span id="year"></span> Enemary Agbo. Built for Accuracy & Ethics.
+    <footer class="bg-black py-6 text-center text-gray-500 text-sm">
+        &copy; <span id="year"></span> Enemary Agbo. All Rights Reserved.
     </footer>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
 </html>
-                 
-            
-               
-            
-            
 
+       
