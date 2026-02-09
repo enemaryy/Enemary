@@ -1,7 +1,4 @@
-
-                      
-              
-                     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -25,8 +22,9 @@
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-tight">ENEMARY AGBO</a>
             <div class="space-x-6 hidden md:block text-sm font-medium">
-                <a href="#projects" class="hover:text-white transition">Projects</a>
-                <a href="#about" class="hover:text-white transition">Approach</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#projects" class="hover:text-white transition">Core Projects</a>
+                <a href="#solo-projects" class="hover:text-white transition">Technical Demos</a>
                 <a href="#testimonials" class="hover:text-white transition">Reviews</a>
                 <a href="#contact" class="hover:text-white transition">Contact</a>
             </div>
@@ -36,100 +34,150 @@
     <main class="container mx-auto px-6 py-12">
 
         <section id="hero" class="py-16 md:py-24 border-b border-gray-800">
-            <div class="max-w-4xl">
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight">
-                    I build AI products that <span class="gradient-text">actually work.</span>
-                </h1>
-                <p class="mt-6 text-xl text-gray-400 leading-relaxed">
-                    I am a <strong>Business Analyst and Technical PM</strong> who specializes in making AI systems accurate. Whether it's building research assistants that don't "hallucinate" or improving how users interact with therapy bots, I ensure technology solves real problems without the errors.
-                </p>
-                <div class="mt-10 flex space-x-4">
-                    <a href="#projects" class="btn-primary text-white font-bold py-4 px-10 rounded-lg">See My Projects</a>
-                    <a href="https://www.linkedin.com/in/enemaryagbo" target="_blank" class="border border-gray-700 py-4 px-10 rounded-lg hover:bg-gray-800 transition">LinkedIn</a>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-shrink-0">
+                    <img src="https://i.imgur.com/jO0tSen.jpeg" alt="Enemary AGBO" class="w-48 h-48 rounded-full object-cover border-4 border-[#215350] shadow-2xl">
+                </div>
+                <div class="max-w-3xl">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                        I build AI products that <span class="gradient-text">solve real problems.</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-400 leading-relaxed">
+                        I am a <strong>Business Analyst and Technical PM</strong>. I bridge the gap between complex technology and human needs. I make sure AI systems are accurate, ethical, and actually useful for the people who use them.
+                    </p>
+                    <div class="mt-8 flex gap-4">
+                        <a href="#projects" class="btn-primary text-white font-bold py-3 px-8 rounded-lg">View My Work</a>
+                        <a href="https://www.linkedin.com/in/enemaryagbo" target="_blank" class="border border-gray-700 py-3 px-8 rounded-lg hover:bg-gray-800 transition">LinkedIn</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-20">
-            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12">Selected Work</h2>
+        <section id="about" class="py-16">
+            <h2 class="text-2xl font-bold text-white mb-6">The Value I Bring</h2>
+            <div class="grid md:grid-cols-2 gap-10 text-gray-400 leading-relaxed">
+                <p>With over 3 years in AI and UX research, I don't just "build bots"—I design systems that think like humans. My background in Mental Health and Neuroscience allows me to create products that are culturally sensitive and emotionally intelligent.</p>
+                <p>As a <strong>Certified Scrum Master</strong>, I help teams move faster by turning messy data into clear product roadmaps. I focus on reducing system errors and making sure the technology respects the user.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="py-20 border-t border-gray-800">
+            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12">Core Professional Projects</h2>
             
             <div class="space-y-16">
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <div class="grid lg:grid-cols-2 gap-12 items-start bg-card p-8 rounded-3xl">
                     <div>
-                        <h3 class="text-3xl font-bold text-white mb-4">AI Research Assistant (RAG Implementation)</h3>
+                        <span class="text-xs font-bold text-[#215350] uppercase">Latest Implementation</span>
+                        <h3 class="text-3xl font-bold text-white mt-2 mb-4">Ensuring AI Accuracy (RAG)</h3>
                         <p class="text-gray-400 mb-6">
-                            AI often makes things up. I built this tool to prove that by connecting an AI model (Llama 3) to a specific database of 40+ research papers, we can force it to provide only 100% factual answers. 
+                            AI often makes things up. I built this demo to show how we can force an AI model to only use specific, verified research papers to answer questions. This eliminates "hallucinations" and makes the AI a reliable assistant for professionals.
                         </p>
-                        <ul class="space-y-2 mb-8 text-sm">
-                            <li class="flex items-center"><span class="text-gold-accent mr-2">✔</span> Reduced factual errors by grounding the model in real data.</li>
-                            <li class="flex items-center"><span class="text-gold-accent mr-2">✔</span> Set up the system to "read" and organize complex PDF research.</li>
-                        </ul>
-                        <a href="https://www.loom.com/share/32bed89779e1465e9d3299006dcb4f12" target="_blank" class="text-white font-bold underline decoration-[#215350] underline-offset-8 hover:text-gold-accent transition">Watch the Demo Video</a>
+                        <a href="https://www.loom.com/share/32bed89779e1465e9d3299006dcb4f12" target="_blank" class="inline-block bg-[#215350] text-white py-2 px-6 rounded-full font-bold">Watch My 2-Min Demo</a>
                     </div>
-                    <div class="rounded-2xl overflow-hidden border border-gray-800 bg-black">
+                    <div class="rounded-xl overflow-hidden border border-gray-700 shadow-2xl">
                         <iframe src="https://www.loom.com/embed/32bed89779e1465e9d3299006dcb4f12" class="w-full aspect-video" allowfullscreen></iframe>
                     </div>
                 </div>
 
-                <div class="bg-card p-8 rounded-2xl">
-                    <h3 class="text-2xl font-bold text-white mb-2">FriendnPal: Product Growth & Analysis</h3>
-                    <p class="text-gray-400 mb-4">I helped bridge the gap between users and an AI therapy bot. By analyzing how users talked to the bot, I helped the team improve its accuracy by 50% and made the platform much more engaging for people seeking help.</p>
-                    <div class="flex gap-6">
-                        <a href="https://friendnpal.com/" class="text-cyan-400 text-sm font-bold">Visit Site</a>
-                        <a href="https://docs.google.com/document/d/1W_MKo1K1PpNWnAiGWx7tXjZG8sI7Vez2ZJnxPngjBvU/edit?usp=sharing" class="text-cyan-400 text-sm font-bold">Case Study</a>
-                    </div>
+                <div class="bg-gray-900 p-8 rounded-2xl border-l-4 border-cyan-500">
+                    <h3 class="text-2xl font-bold text-white mb-2">Published Research: Mental Health Tech in Africa</h3>
+                    <p class="text-gray-400 mb-4 italic text-sm">Published in the International Journal of Research and Innovation in Social Science (IJRISS).</p>
+                    <p class="text-gray-400 mb-4">I co-authored a peer-reviewed study on how digital platforms can close the mental health care gap in Africa. This work highlights my ability to handle deep research and apply it to real-world product models like FriendnPal.</p>
+                    <a href="https://lnkd.in/e4BDRWXk" target="_blank" class="text-gold-accent font-bold hover:underline">Read the Published Paper →</a>
                 </div>
 
-                <div class="bg-[#1a1a1a] p-8 rounded-2xl border-l-4 border-gold-accent">
-                    <h3 class="text-xl font-bold text-white">Published Research: Digital Health in Africa</h3>
-                    <p class="text-gray-400 mt-2">I co-authored a peer-reviewed paper analyzing how digital platforms are changing mental healthcare across Africa. This research directly informs how I build AI tools for diverse populations.</p>
-                    <a href="https://lnkd.in/e4BDRWXk" target="_blank" class="mt-4 inline-block text-gold-accent text-sm font-bold">Read on IJRISS →</a>
+                <div class="bg-card p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-white mb-2">FriendnPal: AI Therapy Platform</h3>
+                    <p class="text-gray-400 mb-4">I led the research to make an AI therapist more culturally aware and emotionally accurate. My work directly helped increase the system’s engagement by 75% and improved its accuracy by over 50%.</p>
+                    <div class="flex gap-6">
+                        <a href="https://friendnpal.com/" class="text-cyan-400 text-sm font-bold hover:underline" target="_blank">View Live Site</a>
+                        <a href="https://docs.google.com/document/d/1W_MKo1K1PpNWnAiGWx7tXjZG8sI7Vez2ZJnxPngjBvU/edit?usp=sharing" class="text-cyan-400 text-sm font-bold hover:underline" target="_blank">Read Case Study</a>
+                    </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-card p-6 rounded-xl">
-                        <h4 class="font-bold text-white">Behavioral Gaming QA</h4>
-                        <p class="text-sm text-gray-400 mt-2">Tested an AI system for pattern recognition, making it 28% faster and more reliable.</p>
-                        <a href="https://docs.google.com/document/d/1nR9ixWJzG6iRIZH_1cWLEWBxGGNy-KWQp4LRPbwGzm0/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-3 block">View Details</a>
+                    <div class="bg-card p-6 rounded-xl border-t-2 border-gray-700">
+                        <h4 class="font-bold text-white">EdTech AI Dashboard</h4>
+                        <p class="text-sm text-gray-400 mt-2">I managed the launch of an AI tool for schools that cut the time teachers spent on grading by 40%.</p>
+                        <a href="https://docs.google.com/document/d/1A3pynGvemVyEmgwkW0okohBLOLUhziuXOyIlOM4aDOQ/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-4 block" target="_blank">Project Details</a>
                     </div>
-                    <div class="bg-card p-6 rounded-xl">
-                        <h4 class="font-bold text-white">EdTech Tool Integration</h4>
-                        <p class="text-sm text-gray-400 mt-2">Managed the rollout of an AI dashboard that saved teachers 40% of their time on marking.</p>
-                        <a href="https://docs.google.com/document/d/1A3pynGvemVyEmgwkW0okohBLOLUhziuXOyIlOM4aDOQ/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-3 block">View Case Study</a>
+                    <div class="bg-card p-6 rounded-xl border-t-2 border-gray-700">
+                        <h4 class="font-bold text-white">AI Behavioral Gaming</h4>
+                        <p class="text-sm text-gray-400 mt-2">I led the testing for an AI gaming platform, making the system 28% faster and significantly more reliable.</p>
+                        <a href="https://docs.google.com/document/d/1nR9ixWJzG6iRIZH_1cWLEWBxGGNy-KWQp4LRPbwGzm0/edit?usp=sharing" class="text-cyan-400 text-xs font-bold mt-4 block" target="_blank">Project Details</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="py-20 border-t border-gray-800">
-            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12 text-center">What People Say</h2>
-            <div class="grid md:grid-cols-3 gap-6 text-sm">
-                <div class="p-6 bg-gray-900 rounded-xl">"Enemary's skills in AI and UX research is truly exceptional." <br><strong>- Femi Banjo</strong></div>
-                <div class="p-6 bg-gray-900 rounded-xl">"Her perspective from testing LLM models helped us see things we hadn't considered." <br><strong>- Vidusha E.</strong></div>
-                <div class="p-6 bg-gray-900 rounded-xl">"Attentive to detail and a very impressive work ethic." <br><strong>- Yusuf Hamza</strong></div>
-                <div class="p-6 bg-gray-900 rounded-xl">"Compassionate and professional. Made a huge impact." <br><strong>- Adanna (FriendnPal)</strong></div>
-                <div class="p-6 bg-gray-900 rounded-xl">"Invaluable insights into UI and friction points." <br><strong>- My Luu</strong></div>
-                <div class="p-6 bg-gray-900 rounded-xl">"Great feedback in usability testing and strategy." <br><strong>- Amber Trivedi</strong></div>
+        <section id="solo-projects" class="py-20 bg-[#0a0a0a] rounded-3xl px-8 border border-gray-800">
+            <h2 class="text-sm font-bold tracking-widest text-gold-accent uppercase mb-12">Technical Demos</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white">Sales Automation System</h3>
+                    <p class="text-gray-400 text-sm">I built an automated system that identifies high-value leads and sends them personalized emails, saving hours of manual work for sales teams.</p>
+                    <a href="https://www.loom.com/share/1658a2d7d4dc4432aa735ea254bb5dab" class="text-cyan-400 text-xs font-bold block" target="_blank">Watch Video →</a>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white">Energy Prediction Model</h3>
+                    <p class="text-gray-400 text-sm">I created a machine learning model to predict energy output for power plants with 93% accuracy. This shows how I use data to solve technical problems.</p>
+                    <a href="https://www.loom.com/share/070982c7282c46ac8fbbb7a0522fb9f3" class="text-cyan-400 text-xs font-bold block" target="_blank">Watch Video →</a>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="py-24 text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Let's talk about your AI goals.</h2>
-            <p class="text-gray-400 mb-10 max-w-xl mx-auto">I'm currently looking for new opportunities to help teams build reliable, user-friendly AI products.</p>
-            <a href="mailto:enegoloyinumary@gmail.com" class="btn-primary text-white font-bold py-4 px-12 rounded-full">Email Me Directly</a>
+        <section id="testimonials" class="py-24">
+            <h2 class="text-3xl font-bold text-white mb-12 text-center">What My Colleagues Say</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "Enemary's skills in AI and UX research is truly exceptional... she brings a balanced approach to the field."
+                    <span class="block mt-4 not-italic font-bold text-white">- Femi Banjo</span>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "Her perspective from testing LLM models helped us see things we hadn't considered. A game-changer."
+                    <span class="block mt-4 not-italic font-bold text-white">- Vidusha Edirisinghe</span>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "Your dedication, professionalism, and compassion truly made a difference. Impact on participants was evident."
+                    <span class="block mt-4 not-italic font-bold text-white">- Adanna, HR Manager, FriendnPal</span>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "I can confidently say that her work ethic is truly impressive and terrific! Attentive to detail."
+                    <span class="block mt-4 not-italic font-bold text-white">- Yusuf Hamza</span>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "Invaluable insights into UI and pinpointing friction points in our model. Productive and efficient."
+                    <span class="block mt-4 not-italic font-bold text-white">- My Luu</span>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-xl border border-gray-800 text-sm italic">
+                    "Great feedback in usability testing and shared insights on strategy to optimize experience."
+                    <span class="block mt-4 not-italic font-bold text-white">- Amber Trivedi</span>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="https://drive.google.com/file/d/1gSzmOIxXMUK4CA_BbV7qN5T-X_v8uw3I/view?usp=sharing" target="_blank" class="text-gold-accent font-bold hover:underline">View All Full Letters of Recommendation →</a>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 text-center border-t border-gray-800">
+            <h2 class="text-3xl font-bold text-white mb-4">Let's build something reliable.</h2>
+            <p class="text-gray-400 mb-10 max-w-xl mx-auto">I'm currently open to Technical PM and Business Analyst roles where I can help teams deliver accurate AI products.</p>
+            <a href="mailto:enegoloyinumary@gmail.com" class="btn-primary text-white font-bold py-4 px-12 rounded-full shadow-xl inline-block">Email Enemary Agbo</a>
         </section>
 
     </main>
 
-    <footer class="py-10 text-center border-t border-gray-800 text-xs text-gray-600">
-        &copy; <span id="year"></span> Enemary Agbo. All Rights Reserved.
+    <footer class="py-10 text-center border-t border-gray-800 text-xs text-gray-500">
+        &copy; <span id="year"></span> Enemary Agbo. Built with a focus on AI Ethics & Accuracy.
     </footer>
 
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
-                  
+
+            
                 
                       
    
+
 
